@@ -575,7 +575,7 @@ def footer():
     </div>
   </div>
   <div class="container footer-bottom">
-    <p>&copy; <span data-year></span> Bertoluchi Publicidade e Marketing Digital. Todos os direitos reservados. <a href="/politica-de-privacidade.html">Política de privacidade</a></p>
+    <p>&copy; <span data-year></span> Bertoluchi Publicidade e Marketing Digital. Todos os direitos reservados. <a href="/politica-de-privacidade.html">Política de privacidade</a> &middot; Site desenvolvido por <a href="https://www.destaqse.com.br/?utm_source=bertoluchi.com.br&amp;utm_medium=referral&amp;utm_campaign=credito-rodape" target="_blank" rel="noopener">Destaq</a></p>
   </div>
 </footer>
 <a class="whatsapp-float" href="{SITE['whatsapp_link']}" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
