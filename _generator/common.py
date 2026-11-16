@@ -14,7 +14,7 @@ SITE = {
     "domain": "https://www.bertoluchi.com.br",
     "phone_display": "(47) 99254-5015",
     "phone_tel": "+5547992545015",
-    "whatsapp_link": "https://wa.me/5547992545015?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20reuni%C3%A3o.",
+    "whatsapp_link": "https://wa.destaqse.com.br/bertoluchi/site?t=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20reuni%C3%A3o.",
     "email": "beatriz@bertoluchiagencia.com.br",
     "address_line1": "R. Victor Müller, 215 - Costa e Silva",
     "address_line2": "Joinville - SC, 89218-460",
@@ -39,7 +39,7 @@ STATS = [
 def whatsapp(texto):
     """Link de WhatsApp com mensagem pronta."""
     from urllib.parse import quote
-    return "https://wa.me/5547992545015?text=" + quote(texto)
+    return "https://wa.destaqse.com.br/bertoluchi/site?t=" + quote(texto)
 
 NAV = [
     ("Início", "/index.html"),
