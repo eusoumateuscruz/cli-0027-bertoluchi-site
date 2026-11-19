@@ -944,7 +944,7 @@ VAGAS = [
 
 # Candidaturas chegam pelo Jotform da agencia; a pagina so apresenta o
 # banco de talentos e leva a pessoa ao formulario em outra aba.
-JOTFORM_URL = "https://form.jotform.com/262935108328056"
+FORM_URL = "https://forms.gle/pQ2phHJ4ojaJnFdz8"
 
 AREAS_TALENTO = [
     "Design gráfico", "Social media e estratégia", "Captação e edição de vídeo",
@@ -991,7 +991,7 @@ def build_trabalhe_conosco():
           <div class="vaga-chamada">
             <h4>{v['chamada_titulo']}</h4>
             <p>{v['chamada']}</p>
-            <a class="btn btn-primary" href="{JOTFORM_URL}" target="_blank" rel="noopener">Candidatar-se a esta vaga</a>
+            <a class="btn btn-primary" href="{FORM_URL}" target="_blank" rel="noopener">Candidatar-se a esta vaga</a>
           </div>
         </article>"""
         vagas_secao = f"""
@@ -1044,7 +1044,7 @@ def build_trabalhe_conosco():
           <span class="eyebrow">Banco de talentos</span>
           <h2>Deixe seu perfil com a gente</h2>
           <p>Mesmo que hoje não tenha vaga para a sua área, cadastre-se. Quando surge uma oportunidade, é no banco de talentos que procuramos primeiro.</p>
-          <a class="btn btn-primary btn-talentos" href="{JOTFORM_URL}" target="_blank" rel="noopener">
+          <a class="btn btn-primary btn-talentos" href="{FORM_URL}" target="_blank" rel="noopener">
             Preencher formulário
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>
           </a>
