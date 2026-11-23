@@ -168,7 +168,7 @@ def schema_empresa():
         "url": SITE["domain"] + "/",
         "logo": SITE["domain"] + "/assets/img/logo.png",
         "image": SITE["domain"] + "/assets/img/hero-desktop.jpg",
-        "description": "Agência de publicidade e marketing digital em Joinville: social media, branding e gestão de influenciadores.",
+        "description": "Agência de publicidade e marketing digital: social media, branding e gestão de influenciadores.",
         "email": SITE["email"],
         "telephone": SITE["phone_tel"],
         "address": {
@@ -179,7 +179,7 @@ def schema_empresa():
             "postalCode": "89218-460",
             "addressCountry": "BR",
         },
-        "areaServed": {"@type": "City", "name": "Joinville"},
+        "areaServed": {"@type": "Country", "name": "Brasil"},
         "openingHoursSpecification": [{
             "@type": "OpeningHoursSpecification",
             "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
@@ -215,8 +215,8 @@ def build_home():
     testimonial_preview = testimonial_marquee(TESTIMONIALS)
 
     html = head(
-        "Bertoluchi Agência: Gestão de Influenciadores e Social Media em Joinville",
-        "Social media, branding e gestão de influenciadores em Joinville. Torne seu negócio uma referência nas redes sociais com a Bertoluchi Agência.",
+        "Bertoluchi Agência: Gestão de Influenciadores e Social Media",
+        "Social media, branding e gestão de influenciadores. Torne seu negócio uma referência nas redes sociais com a Bertoluchi Agência.",
         "/index.html",
         extra_head=schema_empresa(),
     )
@@ -899,48 +899,8 @@ def build_clientes_social_media():
 # ---------------------------------------------------------------- TRABALHE CONOSCO
 # Vagas abertas. Para abrir uma vaga nova, acrescente um item; para fechar,
 # remova. Sem vaga, a secao some e a pagina fica so com o formulario.
-# (vaga de Designer Grafico para Social Media encerrada em 2026-10-23)
-VAGAS = [
-    {
-        "titulo": "Videomaker",
-        "tags": ["Joinville/SC", "Híbrido", "PJ", "Início imediato"],
-        "paragrafos": [
-            "A <strong>Bertoluchi Agência</strong> está em busca de um(a) Videomaker para integrar nosso time!",
-            "Procuramos uma pessoa criativa, organizada, proativa e com olhar atento para produzir conteúdos que conectem marcas e pessoas.",
-            "O foco principal da função será a <strong>captação de vídeos para nossos clientes de Joinville e região</strong>, mas também buscamos alguém que possa contribuir com a edição de vídeos e outras demandas relacionadas à produção de conteúdo para redes sociais.",
-        ],
-        "responsabilidades": [
-            "Realizar captações de vídeos para clientes em Joinville e cidades próximas;",
-            "Planejar e executar gravações de acordo com os roteiros e direcionamentos da equipe;",
-            "Apoiar a edição de vídeos e Reels produzidos pela agência;",
-            "Contribuir com demandas internas de produção de conteúdo e social media;",
-            "Organizar os materiais captados e garantir a qualidade das entregas;",
-            "Trabalhar em conjunto com a equipe criativa para desenvolver conteúdos alinhados à estratégia de cada cliente.",
-        ],
-        "requisitos": [
-            "Residir obrigatoriamente em Joinville/SC;",
-            "Possuir celular próprio com boa qualidade de gravação;",
-            "Ter conhecimento em captação e edição de vídeos;",
-            "Ter disponibilidade para deslocamentos e gravações externas em Joinville e região;",
-            "Ser organizado(a), responsável e ter facilidade para trabalhar em equipe;",
-            "Ter familiaridade com formatos e tendências de conteúdo para redes sociais.",
-        ],
-        "notas": [
-            "<strong>Diferencial:</strong> possuir iPhone 16 ou superior e experiência com produção de vídeos para marcas e empresas.",
-            "Microfones, iluminação, carregadores externos e demais acessórios necessários para as gravações serão disponibilizados pela agência.",
-        ],
-        "informacoes": [
-            ("Modelo de contratação", "Pessoa Jurídica (PJ)"),
-            ("Formato", "Híbrido, com atividades internas e gravações externas."),
-            ("Horário de funcionamento da agência", "Segunda a sexta-feira, das 9h às 17h."),
-            ("Remuneração", "A combinar."),
-            ("Início", "Imediato."),
-            ("Condição inicial", "A contratação contará com uma remuneração inicial diferenciada durante os meses de novembro e dezembro de 2026 e janeiro de 2027. A partir de fevereiro de 2027, o valor será ajustado conforme condições previamente acordadas entre as partes."),
-        ],
-        "chamada_titulo": "Quer fazer parte da Bertoluchi?",
-        "chamada": "Envie seu currículo, portfólio ou exemplos de vídeos produzidos e venha fazer parte do nosso time!",
-    },
-]
+# (vagas de Designer Grafico e de Videomaker encerradas)
+VAGAS = []  # Videomaker encerrada em 2026-11-23 (pedido da Bea)
 
 # Candidaturas chegam pelo Jotform da agencia; a pagina so apresenta o
 # banco de talentos e leva a pessoa ao formulario em outra aba.
@@ -1011,13 +971,11 @@ def build_trabalhe_conosco():
         for i, (t, d) in enumerate(PASSOS_CANDIDATURA, start=1))
     areas = "".join(f"<li>{a}</li>" for a in AREAS_TALENTO)
 
-    n = len(VAGAS)
-    desc_vagas = (f"{n} vaga aberta" if n == 1 else f"{n} vagas abertas") if n else "Banco de talentos aberto"
     botao_vagas = '<a class="btn btn-outline" href="#vagas">Ver vagas abertas</a>' if VAGAS else ""
     html = head(
-        "Trabalhe conosco: vagas e banco de talentos da Bertoluchi",
-        f"Trabalhe na Bertoluchi, agência de marketing digital de Joinville (SC). {desc_vagas}. "
-        "Mesmo sem vaga para a sua área, cadastre-se no nosso banco de talentos.",
+        "Trabalhe conosco: banco de talentos da Bertoluchi",
+        "Trabalhe na Bertoluchi, agência de marketing digital de Joinville (SC). "
+        "Cadastre-se no banco de talentos e deixe seu perfil com a gente.",
         "/trabalhe-conosco.html",
     )
     html += header("/trabalhe-conosco.html")
@@ -1180,7 +1138,13 @@ def main():
     build_resultados()
     build_blog()
     for _p in BLOG_POSTS:
-        build_blog_post(_p)
+        # Artigos usam a origem "blog" no contador de WhatsApp (regra de entrega 3).
+        _wa_site = SITE["whatsapp_link"]
+        SITE["whatsapp_link"] = _wa_site.replace("/bertoluchi/site?", "/bertoluchi/blog?")
+        try:
+            build_blog_post(_p)
+        finally:
+            SITE["whatsapp_link"] = _wa_site
     build_contato()
     build_trabalhe_conosco()
     build_obrigado()

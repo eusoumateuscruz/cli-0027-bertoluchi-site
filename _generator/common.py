@@ -184,8 +184,6 @@ INFLUENCERS = [
      "niche": "Fé | Lifestyle", "img": "influ-larissaestradaa"},
     {"name": "Pastor Lipão", "handle": "@pastorlipao", "city": "Joinville, SC",
      "niche": "Life Style | Fé", "img": "influ-pastorlipao"},
-    {"name": "Nidyellen Rodrigues", "handle": "@nidyellenr", "city": "Florianópolis, SC",
-     "niche": "Life Style | Rotina", "img": "influ-nidyellenr"},
     {"name": "O que fazer em Joinville", "handle": "@oquefazeremjoinville", "city": "Joinville, SC",
      "niche": "Dicas de locais em Joinville e região", "img": "influ-oquefazeremjoinville"},
     {"name": "Flávia Gabriela", "handle": "@fglins", "city": "Porto Ferreira, SP",
